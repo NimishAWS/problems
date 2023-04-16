@@ -19,7 +19,6 @@ print(new_data)
 Answer : [1, 2, 3, 6]
 ```
 
-
 2)  `Return all the Prime Numbers from 1 to 100`
 
 ```sh
@@ -34,6 +33,7 @@ for i in range(2,n+1):
         
 Answer : 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
 ```
+
 3)  `Check if the number is Prime number or Not`
 
 ```sh
@@ -49,7 +49,9 @@ for i in range(n,n+1):
         print("Its not prime number")
 Answer : Its prime number
 ```
+
 4)  `Check if the string is palindrom or not`
+
 ```
 --------------------- Solution (1) -------------------------
 
@@ -101,6 +103,7 @@ Answer : Its palindrom
 ```
 
 5)  `Check if the number is palindrom or not`
+
 ```
 n = 1234321
 
@@ -122,8 +125,37 @@ print(check_pal(n))
 Answer : Its palindrom
 ```
 
+6)  `Find Fibonachi series for n number`
 
+```
+--------------------- Solution (1) -------------------------
 
+def check_fibona(n):
+    a,b = 0,1
+    print(a)
+    while (b<n):
+        print(b)
+        c = a + b
+        a = b
+        b = c
+
+check_fibona(50)
+
+Answer : 0 1 1 2 3 5 8 13 21 34
+
+--------------------- Solution (2) -------------------------
+
+def check_fibona(n):
+    a,b = 0,1
+    print(a)
+    while(b<n):
+        print(b)
+        a,b = b,a+b
+
+check_fibona(50)
+
+Answer : 0 1 1 2 3 5 8 13 21 34
+```
 
 
 
