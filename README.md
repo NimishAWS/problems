@@ -271,3 +271,47 @@ compress(x)
 Answer : a4b3e3j3
 
 ```
+
+8)  ` create the fizz and buzz for n number . If number is divisible by 3 then write FIZZ or number is divisible by 5 then write BUZZ or if number is divisible by both 3 and 5 the write FIZZBUZZ `
+           
+```sh
+
+--------------------- Solution (1) -------------------------
+
+def fizz_buzz(num):
+    for i in range(1,num+1):
+        if i%3 == 0 and i%5 == 0:
+            print("FizzBuzz")
+        elif i%3 == 0:
+            print("Fizz")
+        elif i%5 == 0:
+            print("Buzz")
+        
+        else:
+            print(i)
+            
+fizz_buzz(20)
+
+Answer : None
+
+--------------------- Solution (2) -------------------------
+
+dic = {3:"Fizz",5:"Buzz"}
+
+def fiz_buzz(num):
+    for i in range(1,num+1):
+        result = ""
+        for k,v in dic.items():
+            if i%k == 0:
+                result = result + v
+                print(result)
+        if not result:
+            result = i
+            print(result)
+                
+fiz_buzz(20)
+
+Answer : None
+
+```
+
