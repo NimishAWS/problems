@@ -157,7 +157,8 @@ check_fibona(50)
 Answer : 0 1 1 2 3 5 8 13 21 34
 ```
 
-# Write a program which can remove a particular character from a string.
+7)  `Write a program which can remove a particular character from a string` 
+```sh
 s = input("Enter a string ")
 char = input('What would you like to remove ')
 result = ''
@@ -167,15 +168,16 @@ for i in s:
 
 print(result)
 
-Output : -
-Enter a string chetan
-What would you like to remove c
-hetan
+Answer : Enter a string chetan
+         What would you like to remove c
+         hetan
 
+```
 
-# Extract username from a given email. 
-# Eg if the email is nitish24singh@gmail.com 
-# then the username should be nitish24singh
+8)  `# Extract username from a given email. 
+      Eg:- if the email is nitish24singh@gmail.com 
+           then the username should be nitish24singh
+```sh
 
 name = input("Enter a email ")
 # user_name = name.split("@")
@@ -184,8 +186,6 @@ user_name =name[0:pos]
 
 print(user_name)
 
-output: -
-Enter a email nitish24singh@gmail.com 
-nitish24singh
-
-
+Answer : Enter a email nitish24singh@gmail.com 
+         nitish24singh
+```
