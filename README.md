@@ -270,6 +270,22 @@ compress(x)
 
 Answer : a4b3e3j3
 
+--------------------- Solution (3) -------------------------
+
+ch = {}
+for i in x:
+    if i in ch:
+        ch[i] = ch[i] +1
+    else:
+        ch[i] = 1
+new =''
+for k,v in ch.items():
+    new = new+ k +str(v) 
+    
+print(new)
+
+Answer : a4b3e3j3
+
 ```
 
 8)  ` create the fizz and buzz for n number . If number is divisible by 3 then write FIZZ or number is divisible by 5 then write BUZZ or if number is divisible by both 3 and 5 the write FIZZBUZZ `
