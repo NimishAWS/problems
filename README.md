@@ -155,9 +155,47 @@ def check_fibona(n):
 check_fibona(50)
 
 Answer : 0 1 1 2 3 5 8 13 21 34
+
+--------------------- Solution (3) -------------------------
+
+def feboonachi(num):
+    if num <=1:
+        return num
+    else:
+        return (feboonachi(num-1) + feboonachi(num-2))
+    
+n = 7
+if n <= 0:
+    print("Invalid")
+else:
+    for i in range(n):
+        print(feboonachi(i))
+
+Answer : 0 1 1 2 3 5 
+
+--------------------- Solution (4) -------------------------
+
+def febonacchi(num):
+    a,b = 0,1
+    if num == 1:
+        print(b)
+    else:
+        print(a)
+        print(b)
+        for i in range(2,num):
+            c = a + b
+            a = b 
+            b = c
+            print(c)
+
+febonacchi(7)
+
+Answer : 0 1 1 2 3 5 
+
 ```
 
 7)  `Write a program which can remove a particular character from a string` 
+
 ```sh
 s = input("Enter a string ")
 char = input('What would you like to remove ')
@@ -177,6 +215,7 @@ Answer : Enter a string chetan
 8)  `Extract username from a given email. 
       Eg:- if the email is nitish24singh@gmail.com 
            then the username should be nitish24singh `
+           
 ```sh
 
 name = input("Enter a email ")
@@ -188,4 +227,5 @@ print(user_name)
 
 Answer : Enter a email nitish24singh@gmail.com 
          nitish24singh
+         
 ```
