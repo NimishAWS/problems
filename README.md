@@ -250,6 +250,8 @@ Answer : a4b3e3j3
 
 --------------------- Solution (2) -------------------------
 
+x = "aaaabbbeeejjj"
+
 def compress(x):
     temp = len(x)
     count = 1
