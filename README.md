@@ -229,3 +229,43 @@ Answer : Enter a email nitish24singh@gmail.com
          nitish24singh
          
 ```
+
+8)  `Compress the string x = "aaaabbbeeejjj" `
+           
+```sh
+
+--------------------- Solution (1) -------------------------
+
+x = "aaaabbbeeejjj"
+count_x = ""
+new_list = ""
+for i in x:
+    count_x = i + str(x.count(i))
+    if count_x not in new_list:
+        new_list += count_x
+        
+print(new_list)
+
+Answer : a4b3e3j3
+
+--------------------- Solution (2) -------------------------
+
+def compress(x):
+    temp = len(x)
+    count = 1
+    x_str = ""
+    for i in range(temp-1):
+        if x[i] == x[i+1]:
+            count += 1
+        else:
+            x_str= x_str + x[i] + str(count)
+            count = 1
+    x_str= x_str + x[i] + str(count)
+
+    print(x_str)
+
+compress(x)
+
+Answer : a4b3e3j3
+
+```
