@@ -174,7 +174,7 @@ Answer : Enter a string chetan
 
 ```
 
-8)  `# Extract username from a given email. 
+8)  `Extract username from a given email. 
       Eg:- if the email is nitish24singh@gmail.com 
            then the username should be nitish24singh
 ```sh
