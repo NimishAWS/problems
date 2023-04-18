@@ -22,6 +22,8 @@ Answer : [1, 2, 3, 6]
 2)  `Return all the Prime Numbers from 1 to 100`
 
 ```sh
+--------------------- Solution (1) -------------------------
+
 n = 100
 for i in range(2,n+1):
     is_prime = True
@@ -32,11 +34,28 @@ for i in range(2,n+1):
         print(i)
         
 Answer : 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
+--------------------- Solution (2) -------------------------
+
+def check_prime(number):
+    for num in range(number+1):
+        if num>1:
+            for i in range(2,num):
+                if  num%i == 0:
+                    break
+            else:
+                print(num)
+check_prime(100)
+
+Answer : 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
 ```
 
 3)  `Check if the number is Prime number or Not`
 
 ```sh
+--------------------- Solution (1) -------------------------
+
 n = 97
 for i in range(n,n+1):
     is_prime= True
@@ -47,7 +66,24 @@ for i in range(n,n+1):
         print("Its prime number")
     else:
         print("Its not prime number")
+        
 Answer : Its prime number
+
+--------------------- Solution (2) -------------------------
+
+def check_prime(num):
+    if num > 1:
+        for i in range(2,num//2):
+            if num%i == 0:
+                print("No its not prime number")
+                break
+        else:
+            print(" its prime number")
+            
+check_prime(95)
+
+Answer : Its not prime number
+
 ```
 
 4)  `Check if the string is palindrom or not`
