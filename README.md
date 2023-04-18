@@ -330,4 +330,70 @@ fiz_buzz(20)
 Answer : None
 
 ```
+9)  ` find out least repeating charechter from string  `
+           
+```sh
+
+--------------------- Solution (1) -------------------------
+
+from collections import Counter
+
+y = [1,2,3,4,5,1,2,3,2,1]
+ch_y = Counter(y)
+min_ch = min(ch_y,key=ch_y.get)
+print(min_ch)
+
+print(y.count(1))
+
+Answer : None
+
+--------------------- Solution (2) -------------------------
+
+> search key 
+
+def search_var(y,ser_chr):
+    dic_char = {}
+    for i in y:
+        if i in dic_char:
+            dic_char[i] = dic_char[i] +1
+        else:
+            dic_char[i] = 1
+    return dic_char[ser_chr]
+
+y = "aaabbbbeeekkkkk"   
+print(search_var(y,"k"))
+
+Answer : None
+
+--------------------- Solution (3) -------------------------
+
+y = "aaabbbbeeekkkkk"   
+char_dic = {}
+for i in y:
+    if i in char_dic:
+        char_dic[i] = char_dic[i] +1
+    else:
+        char_dic[i] = 1
+min_char = min(char_dic,key=char_dic.get) 
+print(min_char)
+
+Answer : None
+
+--------------------- Solution (4) -------------------------
+
+y = "aaabbbbeeekkkkk"   
+
+char_dic = {}
+for i in y:
+    if i in char_dic:
+        char_dic[i] =char_dic[i]+1
+    else:
+        char_dic[i] =1
+    
+print(char_dic)
+
+Answer : None
+
+```
+
 
