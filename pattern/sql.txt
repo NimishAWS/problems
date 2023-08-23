@@ -1,0 +1,44 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+# find the higest saalry from employee
+select max(salary) from employee
+where salary < (select max(salary) from employee)
+where salary < (select max(salary) from employee);
+
+select salary from employee order by salary desc limit 2,1;
+select salary from employee order by salary desc limit 1 offset 2;
+
+# find all manager from who hold manager posotion
+select * from employee where (employee_id in (select md_id from employee))
+
+# find the employee with name starts with A
+select name from employee where name like "A%";
+
+# return current date
+
+select current_date;
+select current_data();
+select curdate()
+select data(now())
+select date(current_timestanmp());
+
+# find out even and odds record
+
+select * from employee where id%2==0;
+select * from employee where id%2==1;
+
+# find the nth record from the table
+select * from employee LIMIT 0,1;
+
+# find the fist record 
+select * from employee LIMIT 1;
+
+# find last record 
+select * from employee ORDER by desc limit 1;
+
+# find the distinct record 
+select * from employee group by department_id;
+
+# find max salary from department 
+select dept_id,max(salary) from employee group by dept_id
