@@ -224,7 +224,25 @@ def two_pair(arry,target):
 
 arr = [1,2,4,3,5,7,9]   
 print(two_pair(arr,3))
-        
-        
+
+lis = [4,1,6,3,4,5,2,3]
+x = lis.sort()
+print(lis)
+
+ans =[3, 3,2, 1,4, 4, 5, 6,]
+
+def swap_data(lst):
+    left_idx = 0
+    right_idx = len(lst) -1
+    while left_idx < right_idx:
+        if lst[left_idx] in lst[left_idx+1:]:
+            repated_idx = lst[left_idx+1:].index(lst[left_idx])+left_idx +1
+            lst[left_idx],lst[repated_idx] = lst[repated_idx],lst[left_idx]
+        left_idx +=1
+            
+    return lst
+    
+print(swap_data(lis))
+
             
         
