@@ -432,4 +432,28 @@ Answer : None
 
 ```
 
+```
+
+8)  ` flattern the list nested arr = [1,2,3,[4,5,[6,[9,[0,[3]]]]],7,[8,9],10]`
+           
+```sh
+
+--------------------- Solution (1) -------------------------
+def flat_list(nest_list):
+    single_list = []
+    for item in nest_list:
+        if type(item) is list:
+        
+            single_list.extend(flat_list(item))
+        else:
+            single_list.append(item)
+    
+    return single_list
+    
+
+sing_list = flat_list(arr)
+print(sing_list)
+
+Answer : [1, 2, 3, 4, 5, 6, 9, 0, 3, 7, 8, 9, 10]
+
 
