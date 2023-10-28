@@ -1,0 +1,136 @@
+# 1. How do you reverse a string in Python?
+
+def reverse_string(val):
+    x = ""
+    for i in val:
+        x = i + x
+    return x
+    
+print(reverse_string("Nimish"))
+
+# 2. How do you determine if a string is a palindrome?
+
+def check_palindrome(val):
+    x = ""
+    for i in val:
+        x = i + x
+    
+    if val == x :
+        return "Palindrome"
+    else:
+        return "Not Palindrome"
+        
+print(check_palindrome("nitin"))
+
+# 3. Find the number of occurrences for eacch character in a String?
+
+def char_frequency(val):
+    freq_dic = {}
+    for i in val:
+        if i in freq_dic:
+            freq_dic[i] += 1
+        else:
+            freq_dic[i] = 1
+            
+    return freq_dic
+
+print(char_frequency("Nimish"))
+
+# 4. Find the number of occurrences of a character in a String?
+
+def freq_each_char(val,char):
+    
+    count = 0 
+    for i in val:
+        if i == char:
+            count += 1
+    return char , count
+    
+print(freq_each_char("Nimish","i"))
+
+# 5. Find the number of occurrences of a character in a list?
+
+def char_freq_list(val):
+    freq_dic = {}
+    for i in range(len(val)):
+        if val[i] in freq_dic:
+            freq_dic[val[i]] += 1
+        else:
+            freq_dic[val[i]] = 1
+    return freq_dic
+
+print(char_freq_list(["2","n","n","2","32",8.7,6,2,2]))
+
+# 6. How to find out if the given two strings are anagrams or not?
+
+def check_anagram(val1,val2):
+    
+    s1 = val1.replace(" ","").lower()
+    s2 = val2.replace(" ","").lower()
+    
+    if len(s1) != len(s2):
+        return False
+        
+    count = {}
+    
+    for i in s1:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+    
+    for j in s2:
+        if j in count:
+            count[j] -= 1
+        else:
+            count[j] = 1
+            
+
+    for k,v in count.items():
+        if v > 0:
+            return False
+        
+    else:
+        return True
+        
+print(check_anagram("dad","add"))
+    
+# 7. How do you calculate the number of vowels and consonants in a String?
+
+def calculate_vowel_const(val):
+    count_vwl = 0
+    count_const = 0
+    vowel = "aeiou"
+    
+    for i in val:
+        if i in vowel:
+            count_vwl += 1
+        else:
+            count_const += 1
+    return count_vwl,count_const
+    
+print(calculate_vowel_const("Nimish"))
+
+# 8. How do you get the matching elements in an integer array?
+
+def uniqe_element(val):
+    element_count = {}
+    repeat_element_list = []
+    
+    for i in range(len(val)):
+        if val[i] in element_count:
+            element_count[val[i]] += 1
+        else:
+            element_count[val[i]] = 1
+        
+    for k,v in element_count.items():
+        if v >= 2:
+            repeat_element_list.append(k)
+    return repeat_element_list
+    
+print(uniqe_element(['n','n',1,2,3,4,5,6,5,1,3,2]))
+
+
+            
+        
+
